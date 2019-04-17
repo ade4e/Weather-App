@@ -7,7 +7,7 @@ $(document).ready(function () {
         "&lon=" +
         position.coords.longitude,
         function (json) {
-          var celcius = json.main.temp + "°C";
+          var celcius = Math.floor(json.main.temp) + "°C";
           var fahr = Math.floor(json.main.temp * 9 / 5 + 32) + "°F";
           $("#temp").html(celcius);
           //
